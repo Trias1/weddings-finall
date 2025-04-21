@@ -44,6 +44,7 @@ export default function Undangan() {
       <CalonPasangan />
       <LoveStory />
       <WeedingLocation />
+      <Maps />
       <Container>
         <Row>
           <Col>

@@ -1,4 +1,3 @@
-// pages/index.tsx
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Navbar from "../../components/organisms/Navbar";
@@ -14,7 +13,7 @@ import AdabWalimah from "../../components/organisms/walimah";
 import Amplop from "../../components/organisms/amplop";
 import { useRouter } from "next/router";
 
-export default function undangan() {
+export default function Undangan() {
   const router = useRouter(); // Ambil nama tamu dari query string
   const [bookId, setBookId] = useState("");
   const { name } = router.query;
@@ -38,7 +37,7 @@ export default function undangan() {
       {/* Tampilkan nama tamu jika ada */}
       {name && (
         <div className="text-center mt-3">
-          <h2>Halo, {decodeURIComponent(name)}!</h2>
+          <h2>Halo, {decodeURIComponent(name as string)}!</h2>
         </div>
       )}
       {/* Komponen lainnya */}

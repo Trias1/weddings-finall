@@ -7,11 +7,14 @@ import undanganData from "../../undangan.json";
 
 export default function UndanganUserPage() {
   const router = useRouter();
-  const { id } = router.query;
+  const { id: rawId } = router.query; // Ambil id dari query
   const [isModalVisible, setIsModalVisible] = useState(true);
 
-  // Jika id belum tersedia, tampilkan loading
-  if (!id) return <p>Loading...</p>;
+  // Validasi tipe data id
+  let id = Array.isArray(rawId) ? rawId[0] : rawId;
+
+  // Jika id belum tersedia atau bukan string, tampilkan loading
+  if (!id || typeof id !== "string") return <p>Loading...</p>;
 
   // Cari data berdasarkan nama di URL
   const userData = undanganData.find(
@@ -70,7 +73,7 @@ export default function UndanganUserPage() {
                         data-bs-dismiss="modal"
                         onClick={() => {
                           setIsModalVisible(false); // Sembunyikan modal
-                          router.push(`/trias-zulfa/undangan/${encodeURIComponent(id)}`); // Redirect dengan template string
+                          router.push(`/trias-zulfa/undangan`); // Redirect dengan template string
                         }}
                       >
                         Buka Undangan

@@ -1,0 +1,77 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: "Merriweather", serif;
+    color: #333;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .adabItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+  }
+  
+  .adabItem:last-child {
+    border-bottom: none;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: #ff7f50;
+    flex-shrink: 0;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Responsive untuk perangkat dengan lebar maksimal 768px */
+  @media (max-width: 768px) {
+    .adabItem {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    .content h2 {
+      font-size: 1.3rem;
+    }
+    .content p {
+      font-size: 0.95rem;
+    }
+    .icon {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Responsive untuk perangkat dengan lebar maksimal 480px */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2rem;
+    }
+    .content h2 {
+      font-size: 1.2rem;
+    }
+    .content p {
+      font-size: 0.9rem;
+    }
+    .icon {
+      font-size: 1.5rem;
+    }
+  }

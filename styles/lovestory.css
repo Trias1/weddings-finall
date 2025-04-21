@@ -1,0 +1,199 @@
+
+.containerssaa {
+  display: flex;
+  flex-direction: column;
+  margin-top: -2rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.love-story-container {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 700px;
+  margin-top: -10rem;
+  margin: auto;
+}
+.calon-cardss {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Mengatur jarak antara pengantin */
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; /* Membuat elemen menjadi responsif */
+  }
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #1f1f38;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.moment-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.moment-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1f1f38;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+/* Adjust left & right position */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: auto;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+  text-align: left;
+}
+
+
+@media (max-width: 480px) {
+    /* .calon-cards {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem; 
+      } */
+    .timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10%;
+      width: 4px;
+      height: 100%;
+      background: #1f1f38;
+      transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+      
+    }
+    
+    .timeline-content {
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 70%;
+      left: -1.5rem;
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .moment-title {
+      font-size: 13px;
+      font-weight: bold;
+      text-align: justify;
+    }
+    
+    .moment-description {
+      font-size: 13px;
+      color: #555;
+      text-align: justify;
+    }
+    
+    .timeline-icon {
+      position: absolute;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      background: #1f1f38;
+      color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      z-index: 2;
+    }
+    
+    /* Adjust left & right position */
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: auto;
+      left: 20%;
+      text-align: right;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: auto;
+      text-align: left;
+      right: 35%;
+    }
+  }

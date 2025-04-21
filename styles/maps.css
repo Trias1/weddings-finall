@@ -1,0 +1,48 @@
+/* Membuat peta lebih responsif */
+.map-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Membuat peta dengan rasio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: transparent;
+    border-radius: 10px;
+    margin-top: -10rem; /* Margin atas sedikit lebih kecil */
+  }
+  
+  /* Responsif untuk layar lebih kecil dari 991px */
+  @media (max-width: 991px) {
+    .map-responsive {
+      margin-top: -7rem; /* Margin atas sedikit lebih kecil */
+    }
+  }
+  
+  /* Responsif untuk layar lebih kecil dari 480px (layar ponsel) */
+  @media (max-width: 480px) {
+    .map-responsive {
+      margin-top: -5rem; /* Mengurangi margin atas pada ponsel */
+      padding-bottom: 60%; /* Menyesuaikan rasio untuk ponsel */
+    }
+  }
+  
+  /* Menambahkan style untuk link Buka Maps */
+  .btn-maps {
+    display: inline-block;
+    padding: 12px 24px; /* Menambah padding untuk tombol */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem; /* Menambahkan sedikit margin antara peta dan tombol */
+    transition: background-color 0.3s;
+  }
+  
+  /* Mengatur jarak tombol lebih dekat ke peta */
+  section#maps .container .btn-maps {
+    margin-top: 1rem; /* Atur jarak lebih kecil antara peta dan tombol */
+  }
+  
+  .btn-maps:hover {
+    background-color: #0056b3;
+  }
+  

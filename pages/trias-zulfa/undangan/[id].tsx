@@ -7,21 +7,17 @@ import undanganData from "../../undangan.json";
 
 export default function UndanganUserPage() {
   const router = useRouter();
-  const { id: rawId } = router.query; // Ambil id dari query
+  const { id: rawId } = router.query; 
   const [isModalVisible, setIsModalVisible] = useState(true);
 
-  // Validasi tipe data id
   let id = Array.isArray(rawId) ? rawId[0] : rawId;
 
-  // Jika id belum tersedia atau bukan string, tampilkan loading
   if (!id || typeof id !== "string") return <p>Loading...</p>;
 
-  // Cari data berdasarkan nama di URL
   const userData = undanganData.find(
     (item) => item.name.toLowerCase().replace(/\s+/g, "-") === id
   );
 
-  // Jika data tidak ditemukan, tampilkan pesan error
   if (!userData) {
     return (
       <div className="text-center mt-5">
@@ -35,7 +31,6 @@ export default function UndanganUserPage() {
 
   return (
     <>
-      {/* Modal Awal */}
       {isModalVisible && (
         <div
           className="modal fade show"

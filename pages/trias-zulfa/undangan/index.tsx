@@ -24,7 +24,8 @@ export default function Undangan() {
       {/* Audio untuk suara latar */}
       <audio autoPlay loop>
         <source
-          src="/audio/WeddingNasheedMuhammadAlMuqitLyricsArabic.mp3"
+          // src="/audio/WeddingNasheedMuhammadAlMuqitLyricsArabic.mp3"
+          src="/audio/weslife.mp3"
           type="audio/mp3"
         />
         Browser Anda tidak mendukung elemen audio.
